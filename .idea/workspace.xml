@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="601940f1-4bab-40a5-a0b2-8d15848aaea7" name="Changes" comment="creating new workouts in the list">
+    <list default="true" id="601940f1-4bab-40a5-a0b2-8d15848aaea7" name="Changes" comment="form hides when done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
@@ -64,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702154747500</updated>
-      <workItem from="1702154748583" duration="17312000" />
+      <workItem from="1702154748583" duration="18552000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1702154941513</created>
@@ -115,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702227024756</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="form hides when done">
+      <created>1702227626783</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702227626783</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +146,7 @@
     <MESSAGE value="new classes cycling &amp; running" />
     <MESSAGE value="creating new workouts" />
     <MESSAGE value="creating new workouts in the list" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating new workouts in the list" />
+    <MESSAGE value="form hides when done" />
+    <option name="LAST_COMMIT_MESSAGE" value="form hides when done" />
   </component>
 </project>
