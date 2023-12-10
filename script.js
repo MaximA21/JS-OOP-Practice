@@ -67,7 +67,6 @@ const inputElevation = document.querySelector('.form__input--elevation');
 class App {
     #map
     #mapEvent
-
     #workouts = []
 
     constructor() {
@@ -104,6 +103,14 @@ class App {
         this.#mapEvent = mapE
         form.classList.remove("hidden")
         inputDistance.focus()
+    }
+
+    _hideForm() {
+        form.style.display = "none"
+        form.classList.add("hidden")
+        setTimeout(() => form.style.display = "grid", 1000)
+        // clear input
+        inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = ""
     }
 
     _toggleElevationField() {
@@ -152,8 +159,7 @@ class App {
         this._renderWorkout(workout)
         //hide the form
 
-        // clear inout
-        inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = ""
+        this._hideForm()
     }
 
     _renderWorkoutMarker(workout) {
@@ -166,7 +172,7 @@ class App {
                 closeOnClick: false,
                 className: `${workout.type}-popup`
             }))
-            .setPopupContent(workout.type)
+            .setPopupContent(`${workout.type === "running" ? "🏃" : "🚴"} ${workout.descriptio}`)
             .openPopup()
     }
 
