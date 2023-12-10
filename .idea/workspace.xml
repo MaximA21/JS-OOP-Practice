@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="601940f1-4bab-40a5-a0b2-8d15848aaea7" name="Changes" comment="refactoring into separate functions and classes">
+    <list default="true" id="601940f1-4bab-40a5-a0b2-8d15848aaea7" name="Changes" comment="new classes cycling &amp; running">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702154747500</updated>
-      <workItem from="1702154748583" duration="11243000" />
+      <workItem from="1702154748583" duration="15585000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1702154941513</created>
@@ -89,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702218778592</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new classes cycling &amp; running">
+      <created>1702219795971</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702219795971</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +118,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="rendering of the map" />
     <MESSAGE value="refactoring into separate functions and classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring into separate functions and classes" />
+    <MESSAGE value="new classes cycling &amp; running" />
+    <option name="LAST_COMMIT_MESSAGE" value="new classes cycling &amp; running" />
   </component>
 </project>
