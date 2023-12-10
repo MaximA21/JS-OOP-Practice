@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="601940f1-4bab-40a5-a0b2-8d15848aaea7" name="Changes" comment="init">
+    <list default="true" id="601940f1-4bab-40a5-a0b2-8d15848aaea7" name="Changes" comment="rendering of the map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702154747500</updated>
-      <workItem from="1702154748583" duration="4974000" />
+      <workItem from="1702154748583" duration="10184000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1702154941513</created>
@@ -76,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702155368499</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="rendering of the map">
+      <created>1702213257366</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702213257366</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +102,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="rendering of the map" />
+    <option name="LAST_COMMIT_MESSAGE" value="rendering of the map" />
   </component>
 </project>
