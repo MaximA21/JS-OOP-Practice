@@ -1,11 +1,10 @@
 'use strict';
 
 
-
-
 class Workout {
     date = new Date()
     id = (Date.now() + "").slice(-10)
+
     // in real project always use external lib for unique ids!!!
     constructor(coords, distance, duration) {
         this.coords = coords // [lat, lng]
@@ -21,12 +20,14 @@ class Workout {
 
 class Running extends Workout {
     type = "running"
+
     constructor(coords, distance, duration, cadence) {
         super(coords, distance, duration)
         this.cadence = cadence
         this.calcPace()
         this._setDescription()
     }
+
     calcPace() {
         // min/km
         this.pace = this.duration / this.distance
@@ -36,6 +37,7 @@ class Running extends Workout {
 
 class Cycling extends Workout {
     type = "cycling"
+
     constructor(coords, distance, duration, elevationGain) {
         super(coords, distance, duration)
         this.elevationGain = elevationGain
@@ -67,6 +69,7 @@ class App {
     #mapEvent
 
     #workouts = []
+
     constructor() {
         this._getPosition()
 
@@ -74,36 +77,41 @@ class App {
         inputType.addEventListener("change", this._toggleElevationField)
 
     }
-    _getPosition () {
+
+    _getPosition() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(this._loadMap.bind(this),
-    function () {
+                function () {
                     alert("Pls 🥺")
                 })
         }
     }
-    _loadMap (position) {
-            const {latitude} = position.coords
-            const {longitude} = position.coords
 
-            this.#map = L.map('map').setView([latitude, longitude], 15);
+    _loadMap(position) {
+        const {latitude} = position.coords
+        const {longitude} = position.coords
 
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(this.#map);
+        this.#map = L.map('map').setView([latitude, longitude], 15);
 
-            this.#map.on("click", this._showForm.bind(this))
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(this.#map);
+
+        this.#map.on("click", this._showForm.bind(this))
     }
-    _showForm (mapE) {
+
+    _showForm(mapE) {
         this.#mapEvent = mapE
         form.classList.remove("hidden")
         inputDistance.focus()
     }
-    _toggleElevationField () {
+
+    _toggleElevationField() {
         inputElevation.closest(".form__row").classList.toggle("form__row--hidden")
         inputCadence.closest(".form__row").classList.toggle("form__row--hidden")
     }
-    _newWorkout (evt) {
+
+    _newWorkout(evt) {
         evt.preventDefault()
 
         const validation = (...inputs) => inputs.every(inp => Number.isFinite(inp))
@@ -138,7 +146,7 @@ class App {
         this.#workouts.push(workout)
 
         //render the workout on the map as marker
-      this._renderWorkoutMarker(workout)
+        this._renderWorkoutMarker(workout)
 
         //render the new workout in the list
         this._renderWorkout(workout)
@@ -147,6 +155,7 @@ class App {
         // clear inout
         inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = ""
     }
+
     _renderWorkoutMarker(workout) {
         L.marker(workout.coords)
             .addTo(this.#map)
@@ -161,19 +170,48 @@ class App {
             .openPopup()
     }
 
-    _renderWorkout(workkout) {
-      const html = `<li class="workout workout--${workkout.type}" data-id="${workkout.id}">
-          <h2 class="workout__title">Running on April 14</h2>
+    _renderWorkout(workout) {
+        let html = `<li class="workout workout--${workout.type}" data-id="${workout.id}">
+          <h2 class="workout__title">${workout.description}</h2>
           <div class="workout__details">
-            <span class="workout__icon">${workkout.type === "running" ? "🏃":"🚴"}</span>
-            <span class="workout__value">${workkout.distance}</span>
+            <span class="workout__icon">${workout.type === "running" ? "🏃" : "🚴"}</span>
+            <span class="workout__value">${workout.distance}</span>
             <span class="workout__unit">km</span>
           </div>
           <div class="workout__details">
             <span class="workout__icon">⏱</span>
-            <span class="workout__value">${workkout.duration}</span>
+            <span class="workout__value">${workout.duration}</span>
             <span class="workout__unit">min</span>
           </div>`
+
+        if (workout.type === "running") {
+            html += ` <div class="workout__details">
+            <span class="workout__icon">⚡️</span>
+            <span class="workout__value">${workout.pace.toFixed(1)}</span>
+            <span class="workout__unit">min/km</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">🦶🏼</span>
+            <span class="workout__value">${workout.cadence}</span>
+            <span class="workout__unit">spm</span>
+          </div>
+        </li>`
+        }
+        if (workout.type === "cycling") {
+            html += `  <div class="workout__details">
+            <span class="workout__icon">⚡️</span>
+            <span class="workout__value">${workout.speed.toFixed(1)}</span>
+            <span class="workout__unit">km/h</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">⛰</span>
+            <span class="workout__value">${workout.elevationGain}</span>
+            <span class="workout__unit">m</span>
+          </div>
+        </li> `
+        }
+        form.insertAdjacentHTML("afterend", html)
     }
 }
+
 const app = new App

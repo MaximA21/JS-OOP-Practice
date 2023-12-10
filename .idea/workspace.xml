@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="601940f1-4bab-40a5-a0b2-8d15848aaea7" name="Changes" comment="new classes cycling &amp; running">
+    <list default="true" id="601940f1-4bab-40a5-a0b2-8d15848aaea7" name="Changes" comment="creating new workouts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +46,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -60,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702154747500</updated>
-      <workItem from="1702154748583" duration="15585000" />
+      <workItem from="1702154748583" duration="16631000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1702154941513</created>
@@ -97,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702219795971</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="creating new workouts">
+      <created>1702225950433</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702225950433</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +130,7 @@
     <MESSAGE value="rendering of the map" />
     <MESSAGE value="refactoring into separate functions and classes" />
     <MESSAGE value="new classes cycling &amp; running" />
-    <option name="LAST_COMMIT_MESSAGE" value="new classes cycling &amp; running" />
+    <MESSAGE value="creating new workouts" />
+    <option name="LAST_COMMIT_MESSAGE" value="creating new workouts" />
   </component>
 </project>
